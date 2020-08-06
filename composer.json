@@ -1,0 +1,36 @@
+{
+  "name": "esas/cmsgate-bitrix24-hutkigrosh",
+  "description": "Bitrix24 payment gateway integration for Hutkigrosh (ERIP Belarus)",
+  "keywords": [
+    "cmsgate",
+    "esas",
+    "payment gateway",
+    "bitrix",
+    "bitrix24",
+    "crm",
+    "hutkigrosh",
+    "erip",
+    "api"
+  ],
+  "require": {
+    "php": ">= 5.6.0",
+    "esas/cmsgate-hutkigrosh-lib": "~v1.11.0",
+    "esas/cmsgate-bitrix-lib": "~v1.11.0"
+  },
+  "authors": [
+    {
+      "name": "esas",
+      "email": "support@hutkigrosh.com",
+      "homepage": "https://hutkigrosh.by"
+    }
+  ],
+  "config": {
+    "vendor-dir": "src/esas.hutkigrosh.bitrix24/install/php_interface/include/sale_payment/billbyhutkigrosh/vendor"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Esas\\Hutkigrosh\\": ""
+    }
+  }
+}
