@@ -98,7 +98,6 @@ class BillByHutkigroshHandler extends BillByHandler
             "N"
         );
         $completionPanel = RegistryHutkigroshBitrix24::getRegistry()->getCompletionPanel($orderWrapper);
-        $completionPanel->setQrCode(QRUtils::createQRCode("https://www.hutkigrosh.by/", ""));
         $data['completionPanel'] = $completionPanel;
         return $data;
     }

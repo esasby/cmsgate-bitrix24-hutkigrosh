@@ -80,10 +80,19 @@ class CompletionPanelHutkigroshBitrix24 extends CompletionPanelHutkigrosh
     }
 
     /**
-     * Переопределяем, чтобы в шаблоне не было секции с web[pay
+     * Переопределяем, чтобы в шаблоне не было секции с webpay
      * @return bool
      */
     public function isWebpaySectionEnabled()
+    {
+        return false;
+    }
+
+    /**
+     * Переопределяем, чтобы в шаблоне не было секции с alfaclick
+     * @return bool
+     */
+    public function isAlfaclickSectionEnabled()
     {
         return false;
     }

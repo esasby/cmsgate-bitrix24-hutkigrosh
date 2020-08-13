@@ -14,10 +14,7 @@ use esas\cmsgate\descriptors\ModuleDescriptor;
 use esas\cmsgate\descriptors\VendorDescriptor;
 use esas\cmsgate\descriptors\VersionDescriptor;
 use esas\cmsgate\hutkigrosh\view\client\CompletionPanelHutkigroshBitrix24;
-use esas\cmsgate\hutkigrosh\RegistryHutkigrosh;
 use esas\cmsgate\view\admin\AdminViewFields;
-use CMain;
-use COption;
 use esas\cmsgate\view\admin\ConfigFormBitrix;
 
 class RegistryHutkigroshBitrix24 extends RegistryHutkigrosh
@@ -49,7 +46,8 @@ class RegistryHutkigroshBitrix24 extends RegistryHutkigrosh
                 ConfigFieldsHutkigrosh::paymentMethodName(),
                 ConfigFieldsHutkigrosh::paymentMethodDetails(),
                 ConfigFieldsHutkigrosh::completionCssFile(),
-                ConfigFieldsHutkigrosh::webpaySection()
+                ConfigFieldsHutkigrosh::webpaySection(),
+                ConfigFieldsHutkigrosh::alfaclickSection()
             ]);
         $configForm = new ConfigFormBitrix(
             AdminViewFields::CONFIG_FORM_COMMON,
@@ -78,8 +76,8 @@ class RegistryHutkigroshBitrix24 extends RegistryHutkigrosh
         return new ModuleDescriptor(
             "esas.hutkigrosh.bitrix24",
             new VersionDescriptor("1.10.0", "2020-06-17"),
-            "Прием платежей через ЕРИП (сервис EPOS)",
-            "https://bitbucket.esas.by/projects/CG/repos/cmsgate-bitrix24-epos/browse",
+            "Прием платежей через ЕРИП (сервис ХуткiГрош)",
+            "https://bitbucket.org/esasby/cmsgate-bitrix24-hutkigrosh/src",
             VendorDescriptor::esas(),
             "Выставление пользовательских счетов в ЕРИП"
         );
